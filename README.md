@@ -1,7 +1,5 @@
 # Remote-Message-Passing-Communication
-Remote-Message-Passing-Communication
 
-Purpose:
 This project implements a socket-based message-passing communication channel. Messages are modeled after HTTP messages containing a text header and optionally a body that may consist of binary or text data. The header contains a sequence of lines, the first of which is a command, and remaining header lines contain message attributes2, e.g., address of sender and receiver, and, if the message contains a body, a content-length attribute that specifies the number of bytes in the body. The message header is terminated with a blank line. In Project #4 you will use XML transported in the message body to describe remote processing activities and receive results.
 
 The communication channel provides on the receiving end, a dispatcher that posts the message to one of a collection of registered communicators. Each communicator has an input queue and a child thread that processes messages from its queue.
